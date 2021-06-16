@@ -6,7 +6,6 @@ import classes from './Navbar.module.css';
 
 
 const Navbar = (props) => {
-  let friendsElements = props.state.friends.map(friends => <Friends name={friends.name} id={friends.id} avatar={friends.avatar}/>);
   return (
     <nav className={classes.nav}>
       <div className={classes.item}>
@@ -27,7 +26,6 @@ const Navbar = (props) => {
       <div className={classes.item}>
         <NavLink to="/friends" activeClassName={classes.activeLink}>Friends</NavLink>
       </div>
-     <div>{friendsElements}</div>
     </nav>
   )
 }
